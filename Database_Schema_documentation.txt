@@ -1,0 +1,12 @@
+
+address(id: varchar(255), address_line1: varchar(255), address_line2: varchar(255), city: varchar(255), postcode: varchar(255), state: varchar(255))
+
+appointment(appointment_id: varchar(255), appointment_date: varchar(255), created_date: varchar(255), doctor_id: varchar(255), doctor_name: varchar(255), prior_medical_history: varchar(255), status: varchar(255), symptoms: varchar(255), time_slot: varchar(255), user_email_id: varchar(255), user_id: varchar(255), user_name: varchar(255))
+
+doctor(id: varchar(255), college: varchar(255), dob: varchar(255), email_id: varchar(255), first_name: varchar(255), highest_qualification: varchar(255), last_name: varchar(255), mobile: varchar(255), pan: varchar(255), rating: double, speciality: varchar(255), total_years_of_exp: int)
+
+rating(id: varchar(255), appointment_id: varchar(255), comments: varchar(255), doctor_id: varchar(255), rating: int)
+
+user(email_id: varchar(255), created_date: varchar(255), dob: varchar(255), first_name: varchar(255), last_name: varchar(255), mobile: varchar(255), password: varchar(255), salt: varchar(255))
+
+user_auth_token(id: bigint, access_token: varchar(1000), expires_at: datetime, login_at: datetime, logout_at: datetime, user_id: varchar(255))
